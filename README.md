@@ -24,12 +24,13 @@ nlp = pt_core_news_lg.load()
 # Etiquetando os dados de treinamento
 Para treinar, é necessário um conjunto de daos etiquetados. Esses dados, são armazenados em uma lista composta pelo texto a ser treinado, posição inicial do termo a ser reconecido, posição final do termo a ser reconhecido e por fim a entidade que ela de ser reconhecida.
 
-'''train = [
+[ train = [
           ("COMURG, denominado pregoeiro",{"entities":[(0,6,"Organização")]}),
           ("75.990.524/0001-76",{"entities":[(0,21,"CNPJ")]}),
           ("25/12/2022",{"entities":[(0,10,"Data")]}),
           
-        ]'''
+        ]
+ ]
 # Treinamento das novas entidades
 
 Com os dados etiquetados, podemos passar essas informações para o treino. Para isso, passamos a lista com os dados rotulados para o código que irá transformar seus dados de treinamento em um arquivo .spacy que pode ser usado para treinar seu modelo NER.
